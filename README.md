@@ -43,3 +43,7 @@ The API processes an input array and returns categorized results such as odd/eve
   "sum": "339",
   "concat_string": "Ra"
 }
+
+
+## 🌍 API Endpoint (Hosted on Vercel)
+https://bfhl-jdgtivpzb-dhevatha-s-ps-projects.vercel.app
