@@ -3,13 +3,11 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-// ✅ Change these details to yours
 const fullName = "dhevatha_s_p";
-const dob = "27102003"; // example ddmmyyyy
+const dob = "27102003"; 
 const emailAddr = "dhevatha.sp2022@vitstudent.ac.in";
 const rollNum = "22BCE0826";
 
-// Helper function → alternating caps reverse string
 function makeFancyString(str) {
   let reversed = str.split("").reverse();
   return reversed
@@ -37,7 +35,6 @@ app.post("/bfhl", (req, res) => {
 
     data.forEach((item) => {
       if (!isNaN(item) && item.trim() !== "") {
-        // check number
         const num = parseInt(item, 10);
         if (!isNaN(num)) {
           if (num % 2 === 0) {
@@ -78,8 +75,9 @@ app.post("/bfhl", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("BFHL API is running ✅");
+  res.send("BFHL API is running");
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server live on port ${PORT}`));
+
